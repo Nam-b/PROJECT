@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실습예제 스타벅스</title>
+  <style>
+    *{margin: 0px; padding: 0px;}
+
+    .main{
+      width: 1500px;
+      position: relative;
+      background-image:url(exec02/images/bev_bg.jpg);
+      background-repeat: no-repeat;
+    }
+    .main::after{
+      display: block;
+      content: "";
+      padding:28%;
+    }
+    div{
+      
+    }
+    div img{
+      position: absolute;
+      
+    }
+    .wrap_1,.wrap_2,.wrap_3{
+      display: none;
+    }
+    .wrap_1 img{
+      top: 50px;
+      right: 100px;
+    }
+    .wrap_1 img:first-child{
+      right: 10px;
+    }
+
+    .wrap_2 img{
+      top:80px;
+      right: 300px;
+
+    }
+
+    .wrap_3 img{
+      top:80px;
+      right: 500px;
+    }
+
+  </style>
+    <!-- 제이쿼리 라이브러리 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.wrap_1').delay(1000).fadeIn();
+        $('.wrap_2').delay(2000).fadeIn();
+        $('.wrap_3').delay(3000).fadeIn();
+      })
+    </script>
+</head>
+<body>
+  <h2>스타벅스 실습예제</h2>
+  <section>
+    <article class="main">
+
+      <div class="wrap_1">
+      <img src="./exec02/images/bev1_cup.png" alt="커피1" id="im1">
+      <img src="./exec02/images/bev1_txt.png" alt="커피설명1" id="im1">
+      </div>
+
+      <div class="wrap_2">
+      <img src="./exec02/images/bev2_cup.png" alt="커피2" id="im2">
+      <img src="./exec02/images/bev2_txt.png" alt="커피설명2" id="im2">
+      </div>
+
+      <div class="wrap_3">
+      <img src="./exec02/images/bev3_cup.png" alt="커피3" id="im3">
+      <img src="./exec02/images/bev3_txt.png" alt="커피설명3" id="im3">
+      </div>
+
+    </article>
+  </section>
+</body>
+</html>
